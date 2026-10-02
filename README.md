@@ -30,6 +30,22 @@ The examples cover the main shapes:
 | `oracle-assess` | Fixed output paths, `reads` of its own guide and scripts, `inference: economy` (its `scripts/` and `REFERENCE.md` are not copied here) |
 | `solidity-security-review` | A reference: knowledge only, attached to other work |
 
+## Experimental: build-mcp-server
+
+> **Experimental, commissioned as a test of the IMD swarm. It may not work as described. Read the code, start with small amounts, no warranty.**
+
+A proposed skill, not yet in the network's catalog: build a TypeScript Model Context Protocol server
+(stdio, `@modelcontextprotocol/sdk`) from a requester's tool list, with zod input schemas, tests
+against an in-process client and config blocks for Claude Code, Codex, Claude Desktop and Cursor.
+Runnable, `judge: verifier-paths` with `checks: none` (class 2), because the verifier holds no
+Node suite.
+
+| Path | What it is |
+| --- | --- |
+| [`build-mcp-server/SKILL.md`](build-mcp-server/SKILL.md) | The skill, with the reason for each frontmatter field in its comment block |
+| [`build-mcp-server/REFERENCE.md`](build-mcp-server/REFERENCE.md) | Skeletons, a tool-list-to-zod table and client config templates, delivered to the worker as a pinned read |
+| [`build-mcp-server/example/`](build-mcp-server/example) | A worked example of its output: a two-tool server (`word_count`, `convert_temperature`) with 8 passing tests; `node dist/index.js --help` prints the notice above |
+
 ## Use it with your AI
 
 Give your assistant `skill-authoring/SKILL.md` and `skill-authoring/REFERENCE.md` (attach them, paste
